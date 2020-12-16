@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eb7799e2_2681a22e",
+        "filename": "python-sushy-tools.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2020-12-16T16:01:31Z",
+      "side": 1,
+      "message": "I don\u0027t think these two are required in reality.",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 31
+      },
+      "revId": "fa74386754ba9b4702dc91f81df7fc84550a2418",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b7616e0e_859cc29f",
+        "filename": "sushy-emulator.service",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2020-12-16T16:01:31Z",
+      "side": 1,
+      "message": "Is it necessary? I\u0027d rather have our own user.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 10
+      },
+      "revId": "fa74386754ba9b4702dc91f81df7fc84550a2418",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fcdefef5_a0863d11",
+        "filename": "sushy-emulator.service",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2020-12-16T16:01:31Z",
+      "side": 1,
+      "message": "I think we should generate an empty config file (handled by this RPM) and pass it as --config here. Otherwise a user won\u0027t have any ways to customize sushy-emulator.",
+      "revId": "fa74386754ba9b4702dc91f81df7fc84550a2418",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
