@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7b62d552_d2ba2c67",
+        "filename": "python-sushy-tools.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2020-12-17T11:56:20Z",
+      "side": 1,
+      "message": "testrepository is probably not needed in BuildRequires either, but not sure about testscenarios, it is indeed present in test-requirements",
+      "parentUuid": "eb7799e2_2681a22e",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 31
+      },
+      "revId": "fa74386754ba9b4702dc91f81df7fc84550a2418",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b7616e0e_859cc29f",
         "filename": "sushy-emulator.service",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "1a104690_e5e693f0",
+        "filename": "sushy-emulator.service",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2020-12-17T11:56:20Z",
+      "side": 1,
+      "message": "I think during the test I did initially root was requested, but I can see to that.",
+      "parentUuid": "b7616e0e_859cc29f",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 10
+      },
+      "revId": "fa74386754ba9b4702dc91f81df7fc84550a2418",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fcdefef5_a0863d11",
         "filename": "sushy-emulator.service",
         "patchSetId": 2
@@ -59,6 +107,24 @@
       "writtenOn": "2020-12-16T16:01:31Z",
       "side": 1,
       "message": "I think we should generate an empty config file (handled by this RPM) and pass it as --config here. Otherwise a user won\u0027t have any ways to customize sushy-emulator.",
+      "revId": "fa74386754ba9b4702dc91f81df7fc84550a2418",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "efd94593_c9c82ffc",
+        "filename": "sushy-emulator.service",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2020-12-17T11:56:20Z",
+      "side": 1,
+      "message": "right, good point",
+      "parentUuid": "fcdefef5_a0863d11",
       "revId": "fa74386754ba9b4702dc91f81df7fc84550a2418",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
