@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "910cd215_de52fcca",
+        "filename": "python-sushy-tools.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2021-01-06T13:24:30Z",
+      "side": 1,
+      "message": "git-core",
+      "revId": "050f7ec4c7ac6355550b7a138d8712e705bd45c6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
