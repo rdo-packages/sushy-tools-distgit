@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ab94bc4_9e4d4960",
+        "filename": "python-sushy-tools.spec",
+        "patchSetId": 10
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-01-12T12:25:15Z",
+      "side": 1,
+      "message": "move this out of subpackage as it\u0027s needed for %prep, can be added around Line 26",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 23
+      },
+      "revId": "7041d6110b872031a7c4516fee6a7c6064a148c5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "23782111_e0ab0759",
+        "filename": "python-sushy-tools.spec",
+        "patchSetId": 10
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-01-12T12:25:15Z",
+      "side": 1,
+      "message": "macro is not defined.",
+      "range": {
+        "startLine": 76,
+        "startChar": 2,
+        "endLine": 76,
+        "endChar": 19
+      },
+      "revId": "7041d6110b872031a7c4516fee6a7c6064a148c5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6d518538_29be4168",
+        "filename": "python-sushy-tools.spec",
+        "patchSetId": 10
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-01-12T12:25:15Z",
+      "side": 1,
+      "message": "Need to change to below:-\n%dir %attr(-, root, sushy-tools) %{_sysconfdir}/sushy-emulator\n%config(noreplace) %attr(-, root, sushy-tools) %{_sysconfdir}/sushy-emulator/sushy-emulator.conf\n\nwith current config it results into Note: BUILDSTDERR: warning: File listed twice: /etc/sushy-emulator/sushy-\n  emulator.conf",
+      "range": {
+        "startLine": 131,
+        "startChar": 0,
+        "endLine": 132,
+        "endChar": 77
+      },
+      "revId": "7041d6110b872031a7c4516fee6a7c6064a148c5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c02f549b_9c827bc8",
+        "filename": "python-sushy-tools.spec",
+        "patchSetId": 10
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-01-12T12:25:15Z",
+      "side": 1,
+      "message": "It will be good if moved together with %pre and above %files and move %files -n python3-%{sname} along with %files of other subpackages for readability. or along with python3-%{sname} itself.",
+      "range": {
+        "startLine": 150,
+        "startChar": 0,
+        "endLine": 157,
+        "endChar": 51
+      },
+      "revId": "7041d6110b872031a7c4516fee6a7c6064a148c5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f57cf894_7cb1abab",
+        "filename": "python-sushy-tools.spec",
+        "patchSetId": 10
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-01-12T12:25:15Z",
+      "side": 1,
+      "message": "also add %changelog like https://github.com/rdo-packages/sushy-distgit/blob/rpm-master/python-sushy.spec#L130",
+      "revId": "7041d6110b872031a7c4516fee6a7c6064a148c5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
