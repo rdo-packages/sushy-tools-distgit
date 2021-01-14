@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c1089be5_ff76239c",
+        "filename": "python-sushy-tools.spec",
+        "patchSetId": 11
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-01-14T15:58:54Z",
+      "side": 1,
+      "message": "This would be better to right before %check.",
+      "range": {
+        "startLine": 122,
+        "startChar": 0,
+        "endLine": 129,
+        "endChar": 94
+      },
+      "revId": "b0174cacb9b9a6512a603067e5440fbe9cb3ca70",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4b9741b1_c1dc5605",
+        "filename": "python-sushy-tools.spec",
+        "patchSetId": 11
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-01-14T15:58:54Z",
+      "side": 1,
+      "message": "It\u0027d be better to move %post and %postun right after %preun.",
+      "range": {
+        "startLine": 152,
+        "startChar": 0,
+        "endLine": 156,
+        "endChar": 51
+      },
+      "revId": "b0174cacb9b9a6512a603067e5440fbe9cb3ca70",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
