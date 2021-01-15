@@ -108,6 +108,15 @@ sphinx-build-3 -W -b html doc/source doc/build/html
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
+%install
+%{py3_install}
+# Install systemd script
+mkdir -p %{buildroot}%{_unitdir}
+install -p -D -m 644 %{SOURCE1} %{buildroot}/%{_unitdir}/sushy-emulator.service
+# Install distribution config
+mkdir -p %{buildroot}%{_sysconfdir}/sushy-emulator/
+install -p -D -m 640 %{SOURCE2} %{buildroot}/%{_sysconfdir}/sushy-emulator/sushy-emulator.conf
+
 %check
 %{__python3} setup.py test
 
@@ -119,14 +128,11 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 %preun -n python3-%{sname}
 %systemd_preun sushy-emulator.service
 
-%install
-%{py3_install}
-# Install systemd script
-mkdir -p %{buildroot}%{_unitdir}
-install -p -D -m 644 %{SOURCE1} %{buildroot}/%{_unitdir}/sushy-emulator.service
-# Install distribution config
-mkdir -p %{buildroot}%{_sysconfdir}/sushy-emulator/
-install -p -D -m 640 %{SOURCE2} %{buildroot}/%{_sysconfdir}/sushy-emulator/sushy-emulator.conf
+%post -n python3-%{sname}
+%systemd_post sushy-emulator.service
+
+%postun -n python3-%{sname}
+%systemd_postun_with_restart sushy-emulator.service
 
 %files -n python3-%{sname}
 %license LICENSE
@@ -148,11 +154,5 @@ install -p -D -m 640 %{SOURCE2} %{buildroot}/%{_sysconfdir}/sushy-emulator/sushy
 %license LICENSE
 %doc doc/build/html README.rst
 %endif
-
-%post -n python3-%{sname}
-%systemd_post sushy-emulator.service
-
-%postun -n python3-%{sname}
-%systemd_postun_with_restart sushy-emulator.service
 
 %changelog
