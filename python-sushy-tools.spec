@@ -48,7 +48,7 @@ BuildRequires: python3-requests
 BuildRequires: python3-setuptools
 BuildRequires: python3-tenacity
 
-Requires: python3-flask >= 1.0.2
+Requires: python3-flask >= 1:1.0.2
 Requires: python3-ironic-lib >= 4.6.1
 Requires: python3-requests >= 2.14.2
 Requires: python3-tenacity >= 6.2.0
