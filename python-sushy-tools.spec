@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
+%global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global with_doc 1
@@ -9,8 +9,8 @@
 %global common_desc_tests Tests for sushy-tools library
 
 Name: python-%{sname}
-Version: XXX
-Release: XXX
+Version: 0.21.0
+Release: 1%{?dist}
 Summary: %{common_desc}
 License: ASL 2.0
 URL: https://opendev.org/openstack/sushy-tools
@@ -157,3 +157,6 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 %endif
 
 %changelog
+* Wed Sep 21 2022 RDO <dev@lists.rdoproject.org> 0.21.0-1
+- Update to 0.21.0
+
