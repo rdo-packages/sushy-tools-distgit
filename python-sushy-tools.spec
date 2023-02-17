@@ -160,3 +160,4 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 * Fri Oct 08 2021 RDO <dev@lists.rdoproject.org> 0.18.2-1
 - Update to 0.18.2
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/sushy-tools/commit/7115db2f3adc6db673fa87830e15e22d812f5783
