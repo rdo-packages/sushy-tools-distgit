@@ -33,6 +33,24 @@
       "message": "looks like an issue with the order of a test result\ntrying to see if we can easily fix that\nbtw we removed support for Python 3.6 eight months ago",
       "revId": "1d9adca88f47e539f24067a04b1a5261d6ed68c6",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8186220_fbc56115",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-02-22T13:43:59Z",
+      "side": 1,
+      "message": "yes, we guessed that so we have pinned xena and yoga to last known good hash https://review.rdoproject.org/r/c/rdoinfo/+/47168\n\nLet us know if you prefer to fix it and keep following master in Y and X",
+      "parentUuid": "deb4a206_db6b0290",
+      "revId": "1d9adca88f47e539f24067a04b1a5261d6ed68c6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
