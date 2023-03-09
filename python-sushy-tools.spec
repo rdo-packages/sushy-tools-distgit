@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
+%global sources_gpg_sign 0xa7475c5f2122fec3f90343223fe3bf5aad1080e4
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
@@ -11,8 +11,8 @@
 %global common_desc_tests Tests for sushy-tools library
 
 Name: python-%{sname}
-Version: XXX
-Release: XXX
+Version: 0.21.1
+Release: 1%{?dist}
 Summary: %{common_desc}
 License: Apache-2.0
 URL: https://opendev.org/openstack/sushy-tools
@@ -43,6 +43,7 @@ Summary: %{common_desc}
 
 BuildRequires: python3-devel
 BuildRequires: pyproject-rpm-macros
+BuildRequires: systemd
 %description -n python3-%{sname}
 %{common_desc}
 
@@ -143,7 +144,7 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 %{_unitdir}/sushy-emulator.service
 %dir %attr(-, root, sushy-tools) %{_sysconfdir}/sushy-emulator
 %config(noreplace) %attr(-, root, sushy-tools) %{_sysconfdir}/sushy-emulator/sushy-emulator.conf
-%exclude %{python3_sitelib}/%{dname}/tests
+%exclude %{python3_sitelib}/%{fname}/tests
 
 %files -n python3-%{sname}-tests
 %license LICENSE
@@ -156,3 +157,6 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 %endif
 
 %changelog
+* Thu Mar 09 2023 RDO <dev@lists.rdoproject.org> 0.21.1-1
+- Update to 0.21.1
+
