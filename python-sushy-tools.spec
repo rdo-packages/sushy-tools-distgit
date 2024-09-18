@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
+%global sources_gpg_sign 0xf8675126e2411e7748dd46662fc2093e4682645f
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
@@ -11,8 +11,8 @@
 %global common_desc_tests Tests for sushy-tools library
 
 Name: python-%{sname}
-Version: XXX
-Release: XXX
+Version: 1.3.0
+Release: 1%{?dist}
 Summary: %{common_desc}
 License: Apache-2.0
 URL: https://opendev.org/openstack/sushy-tools
@@ -156,3 +156,6 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 %endif
 
 %changelog
+* Wed Sep 18 2024 RDO <dev@lists.rdoproject.org> 1.3.0-1
+- Update to 1.3.0
+
