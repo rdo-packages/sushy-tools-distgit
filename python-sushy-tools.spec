@@ -27,6 +27,7 @@ Source102: https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
 BuildRequires: git-core
+BuildRequires: systemd
 BuildArch: noarch
 
 # Required for tarball sources verification
