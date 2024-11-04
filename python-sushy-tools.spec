@@ -160,3 +160,4 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 * Wed Sep 21 2022 RDO <dev@lists.rdoproject.org> 0.21.0-1
 - Update to 0.21.0
 
+
