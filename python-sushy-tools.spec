@@ -47,6 +47,7 @@ BuildRequires: python3-pbr
 BuildRequires: python3-requests
 BuildRequires: python3-setuptools
 BuildRequires: python3-tenacity
+BuildRequires: systemd
 
 Requires: python3-flask >= 1:1.0.2
 Requires: python3-ironic-lib >= 4.6.1
@@ -144,7 +145,7 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 %{_unitdir}/sushy-emulator.service
 %dir %attr(-, root, sushy-tools) %{_sysconfdir}/sushy-emulator
 %config(noreplace) %attr(-, root, sushy-tools) %{_sysconfdir}/sushy-emulator/sushy-emulator.conf
-%exclude %{python3_sitelib}/%{dname}/tests
+%exclude %{python3_sitelib}/%{fname}/tests
 
 %files -n python3-%{sname}-tests
 %license LICENSE
@@ -159,4 +160,5 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 %changelog
 * Thu Mar 09 2023 RDO <dev@lists.rdoproject.org> 0.21.1-1
 - Update to 0.21.1
+
 
