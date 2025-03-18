@@ -1,6 +1,8 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
+%global sources_gpg_sign 0x22284f69d9eccdf3df7819791c711af193ff8e54
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%{?dlrn: %global tarsources sushy-tools}
+%{!?dlrn: %global tarsources sushy_tools}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
 
@@ -11,18 +13,18 @@
 %global common_desc_tests Tests for sushy-tools library
 
 Name: python-%{sname}
-Version: XXX
-Release: XXX
+Version: 2.0.0
+Release: 1%{?dist}
 Summary: %{common_desc}
 License: Apache-2.0
 URL: https://opendev.org/openstack/sushy-tools
 
-Source0: https://tarballs.opendev.org/openstack/%{sname}/%{sname}-%{upstream_version}.tar.gz
+Source0: https://tarballs.opendev.org/openstack/%{sname}/%{tarsources}-%{upstream_version}.tar.gz
 Source1: sushy-emulator.service
 Source2: sushy-emulator.conf
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
-Source101: http://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}.tar.gz.asc
+Source101: http://tarballs.openstack.org/%{sname}/%{tarsources}-%{upstream_version}.tar.gz.asc
 Source102: https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
@@ -74,7 +76,7 @@ Documentation for sushy-tools
 %if 0%{?sources_gpg} == 1
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
-%autosetup -n %{sname}-%{upstream_version} -S git
+%autosetup -n %{tarsources}-%{upstream_version} -S git
 
 
 sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
@@ -157,3 +159,6 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 %endif
 
 %changelog
+* Tue Mar 18 2025 RDO <dev@lists.rdoproject.org> 2.0.0-1
+- Update to 2.0.0
+
