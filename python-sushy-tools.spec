@@ -11,8 +11,8 @@
 %global common_desc_tests Tests for sushy-tools library
 
 Name: python-%{sname}
-Version: XXX
-Release: XXX
+Version: 2.0.0
+Release: 1%{?dist}
 Summary: %{common_desc}
 License: Apache-2.0
 URL: https://opendev.org/openstack/sushy-tools
@@ -157,3 +157,6 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 %endif
 
 %changelog
+* Tue Mar 18 2025 RDO <dev@lists.rdoproject.org> 2.0.0-1
+- Update to 2.0.0
+
