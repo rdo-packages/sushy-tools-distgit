@@ -159,3 +159,4 @@ getent passwd sushy-tools >/dev/null || useradd -r \
 %endif
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/sushy-tools/commit/ebef351f5139ab7eda69f898f8fe2e5df86a0c10
